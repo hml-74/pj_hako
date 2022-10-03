@@ -5,9 +5,9 @@ import Publication from '~/pages/Publication';
 import Discuss from '~/pages/Discuss';
 
 export const publicRoutes = [
-  { path: '/', component: Home },
-  { path: '/compose', component: Compose },
-  { path: '/convert', component: Convert },
-  { path: '/publication', component: Publication },
-  { path: '/discuss', component: Discuss },
+  { name: 'Home', path: '/', component: Home },
+  { name: 'Compose', path: '/compose', component: Compose },
+  { name: 'Convert', path: '/convert', component: Convert },
+  { name: 'Publication', path: '/publication', component: Publication },
+  { name: 'Discuss', path: '/discuss', component: Discuss },
 ];

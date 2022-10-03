@@ -1,12 +1,13 @@
-import Header from './Header';
-import Slider from './Slider';
-import Footer from './Footer';
+import Header from '~/components/Layout/components/Header';
+import Slider from '~/components/Layout/components/Slider';
+import Footer from '~/components/Layout/components/Footer';
 
-function DefaultLayout() {
+function DefaultLayout({ children }) {
   return (
     <div>
       <Header />
       <Slider />
+      <div className="container">{children}</div>
       <Footer />
     </div>
   );

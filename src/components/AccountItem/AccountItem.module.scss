@@ -1,0 +1,47 @@
+.wrapper {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+  }
+}
+
+.avt {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--bodder-color);
+  background-position: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.info {
+  flex: 1;
+}
+
+.user {
+  color: var(--text-color);
+  line-height: 2rem;
+  height: 2rem;
+  flex: 1;
+  display: block;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.name {
+  font-size: 1.2rem;
+  color: var(--shadow-color);
+}

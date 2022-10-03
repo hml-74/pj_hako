@@ -1,0 +1,120 @@
+.wrapper {
+  height: var(--height-header);
+  background-image: linear-gradient(-45deg, #dbe924, var(--primary-color));
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+  box-shadow: 0 1px 5px var(--shadow-color);
+
+  .inner {
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      background-color: #1d5167;
+      box-shadow: 0 0 2px var(--shadow-color);
+      border-radius: 4px;
+      height: 40px;
+    }
+
+    .navbar {
+      margin-right: auto;
+      display: flex;
+      align-items: center;
+
+      .navbar-item {
+        color: var(--text-color);
+        display: block;
+        text-align: center;
+        height: var(--height-header);
+        line-height: var(--height-header);
+        padding: 0 4px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.search {
+  --height-search: 36px;
+  display: flex;
+  width: 200px;
+  height: var(--height-search);
+  border-radius: calc(var(--height-search) / 2);
+  background-color: var(--third-color);
+  position: relative;
+
+  .search-input {
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    font-size: 1.4rem;
+    flex: 1;
+    padding: 0 8px;
+    background-color: transparent;
+    caret-color: var(--primary-color);
+  }
+
+  .search-input:not(:placeholder-shown) ~ .search-btn {
+    color: var(--primary-color);
+  }
+
+  .load,
+  .clear {
+    background-color: transparent;
+    color: var(--shadow-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+  }
+  .search-btn {
+    color: var(--shadow-color);
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 0 8px;
+    margin-left: 28px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: calc(var(--height-search) / 2);
+    width: 1px;
+    background-color: var(--shadow-color);
+    top: calc(var(--height-search) / 4);
+    right: 34px;
+  }
+
+  &:focus-within {
+    box-shadow: 0 0 1px var(--shadow-color);
+  }
+}
+
+.search-result {
+  width: 300px;
+}
+
+.search-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--shadow-color);
+  cursor: default;
+  border-bottom: 1px solid var(--bodder-color);
+  user-select: none;
+  padding: 8px;
+}
+
+.search-title:not(:first-child) {
+  border-top: 1px solid var(--bodder-color);
+}

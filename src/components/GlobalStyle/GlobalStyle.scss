@@ -2,7 +2,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 :root {
+  --primary-color: #1ec5af;
+  --second-color: rgba(79, 195, 179, 0.8);
+  --third-color: #fafafa;
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+  --height-header: 50px;
+  --shadow-color: #939393;
+  --hover-color: rgba(22, 24, 35, 0.03);
+  --bodder-color: #dbdbdb;
+  --notify-color: #eb1d57;
+  --news-color: #e01bb4;
+  --qna-color: #252eef;
+  --review-color: #28e1e8;
+  --discuss-color: #1ee865;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button,
+input,
+[tabindex] {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
 }
 
 * {
@@ -19,4 +63,27 @@ body {
   line-height: 2rem;
   margin: 0;
   padding: 0;
+  font-weight: 600;
+}
+
+.ratio {
+  position: relative;
+
+  .img-in-ratio {
+    position: absolute;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-size: 100% 100%;
+  }
+}
+
+.ratio:before {
+  content: '';
+  display: block;
+  padding-top: 143.3333333333%;
+  width: 100%;
 }

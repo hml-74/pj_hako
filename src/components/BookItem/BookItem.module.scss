@@ -1,0 +1,41 @@
+.wrapper {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+  }
+}
+
+.cover {
+  width: 28px;
+  margin: 0 10px 0 2px;
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  color: var(--text-color);
+  line-height: 2rem;
+  height: 2rem;
+  flex: 1;
+  display: block;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.author {
+  font-size: 1.2rem;
+  color: var(--shadow-color);
+}
