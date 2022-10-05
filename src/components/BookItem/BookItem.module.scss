@@ -6,7 +6,7 @@
 
   &:hover {
     cursor: pointer;
-    background-color: var(--hover-color);
+    background: var(--hover);
   }
 }
 
@@ -20,7 +20,7 @@
 }
 
 .name {
-  color: var(--text-color);
+  color: var(--text);
   line-height: 2rem;
   height: 2rem;
   flex: 1;
@@ -31,11 +31,11 @@
   -webkit-line-clamp: 1;
 
   &:hover {
-    color: var(--primary-color);
+    color: var(--primary);
   }
 }
 
 .author {
   font-size: 1.2rem;
-  color: var(--shadow-color);
+  color: var(--shadow);
 }
