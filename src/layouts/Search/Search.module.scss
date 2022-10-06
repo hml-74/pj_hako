@@ -1,46 +1,5 @@
 .wrapper {
-  height: var(--height-header);
-  background: var(--white);
-  // background-image: linear-gradient(-45deg, #dbe924, var(--primary));
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  display: block;
-  box-shadow: 0 1px 5px var(--shadow);
-
-  .inner {
-    height: 100%;
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .logo {
-      background: #1d5167;
-      box-shadow: 0 0 2px var(--shadow);
-      border-radius: 4px;
-      height: 40px;
-    }
-
-    .navbar {
-      margin-right: auto;
-      display: flex;
-      align-items: center;
-
-      .navbar-item {
-        color: var(--text);
-        display: block;
-        text-align: center;
-        height: var(--height-header);
-        line-height: var(--height-header);
-        padding: 0 4px;
-        font-weight: 700;
-      }
-    }
-  }
+  margin: 0 auto;
 }
 
 .search {
@@ -51,7 +10,6 @@
   border-radius: calc(var(--height-search) / 2);
   background: var(--third);
   position: relative;
-  margin-right: 8px;
 
   .search-input {
     border: none;
@@ -61,7 +19,7 @@
     border-radius: inherit;
     font-size: 1.4rem;
     flex: 1;
-    padding: 0 8px 0 16px;
+    padding: 0 0px 0 16px;
     background: transparent;
     caret-color: var(--primary);
   }
@@ -80,6 +38,21 @@
     right: 40px;
     width: 16px;
     height: 16px;
+  }
+  .clear {
+    cursor: pointer;
+  }
+  .load {
+    animation: spinner 0.8s linear infinite;
+  }
+
+  @keyframes spinner {
+    from {
+      transform: translateY(-50%) rotate(0);
+    }
+    to {
+      transform: translateY(-50%) rotate(360deg);
+    }
   }
   .search-btn {
     color: var(--shadow);
@@ -122,19 +95,4 @@
 
 .search-title:not(:first-child) {
   border-top: 1px solid var(--bodder);
-}
-
-// actions
-
-.actions {
-  display: flex;
-  align-items: center;
-}
-
-.more-btn {
-  font-size: 2.4rem;
-  padding: 2px 6px;
-  color: var(--primary);
-  background-color: transparent;
-  margin: 0 -6px 0 16px;
 }

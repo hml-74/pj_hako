@@ -1,0 +1,7 @@
+.wrapper {
+  height: 200px;
+  background-image: linear-gradient(45deg, #dbe924, var(--primary));
+  display: block;
+  box-shadow: 0 1px 5px var(--shadow);
+  margin-top: var(--height-header);
+}

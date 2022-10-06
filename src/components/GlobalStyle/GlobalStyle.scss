@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  --primary: #1ec5af;
-  --second: rgba(79, 195, 179, 0.1);
+  --primary: rgb(30, 197, 175);
+  --second: rgba(30, 197, 175, 0.1);
   --third: #f1f1f2;
   --white: #fff;
   --black: #000;
@@ -17,6 +17,7 @@
   --qna: #252eef;
   --review: #28e1e8;
   --discuss: #1ee865;
+  --danger: #dc3545;
 }
 
 h1,
@@ -31,7 +32,7 @@ h6 {
 
 a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--black);
 }
 
 ul {
@@ -64,6 +65,7 @@ body {
   margin: 0;
   padding: 0;
   font-weight: 600;
+  overflow-y: overlay;
 }
 
 .ratio {
@@ -86,4 +88,39 @@ body {
   display: block;
   padding-top: 143.3333333333%;
   width: 100%;
+}
+
+// Custom tippy tooltip
+body {
+  .tippy-box {
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    background-color: rgba(84, 84, 84, 0.92);
+  }
+
+  .tippy-arrow {
+    color: rgba(84, 84, 84, 0.92);
+  }
+
+  .tippy-content {
+    padding: 8px 9px;
+  }
+}
+
+// Scrollbar CSS
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(79, 195, 179, 0.4);
+}
+
+html *::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
 }
