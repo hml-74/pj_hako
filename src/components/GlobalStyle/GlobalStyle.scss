@@ -1,5 +1,7 @@
 @import 'normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
 
 :root {
   --primary: rgb(30, 197, 175);
@@ -33,6 +35,10 @@ h6 {
 a {
   text-decoration: none;
   color: var(--black);
+
+  &:hover {
+    color: var(--primary);
+  }
 }
 
 ul {
@@ -68,6 +74,7 @@ body {
   overflow-y: overlay;
 }
 
+// Custom img
 .ratio {
   position: relative;
 

@@ -28,11 +28,13 @@ import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import Image from '~/components/Image';
 import Search from '../../Search';
+import { Fragment } from 'react';
 
 const cl = classNames.bind(styles);
 
 function Header() {
-  const currenntUser = true;
+  // const currenntUser = true;
+  const currenntUser = false;
 
   const MENU_ITEM = [
     {
@@ -151,11 +153,14 @@ function Header() {
                 fallback={images.noAvt}
               />
             ) : (
-              <>
-                <button className={cl('more-btn')}>
-                  <FontAwesomeIcon icon={faEllipsisVertical} />
-                </button>
-              </>
+              <button
+                className={cl('more-btn')}
+                onClick={() => {
+                  console.log(MENU_ITEM);
+                }}
+              >
+                <FontAwesomeIcon icon={faEllipsisVertical} />
+              </button>
             )}
           </Menu>
         </div>
